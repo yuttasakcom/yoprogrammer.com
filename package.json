@@ -44,7 +44,9 @@
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/yoprogrammer.com.git"
   },
-  "keywords": ["yoprogrammer.com"],
+  "keywords": [
+    "yoprogrammer.com"
+  ],
   "author": "Yuttasak Pannawat <yuttasakcom@gmail.com>",
   "license": "MIT",
   "bugs": {
