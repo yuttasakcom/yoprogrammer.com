@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  proxy:
+    build: ./nginx
+    container_name: proxy
+    networks:
+      - proxy
+    ports:
+      - "80:80"
+    restart: always
+
+  nodejs:
+    build: .
+    container_name: nodejs
+    environment:
+      - NODE_ENV=production
+      - HOST=yoprogrammer.com
+    networks:
+      - proxy
+    restart: always
+
+networks:
+  proxy:
+    driver: overlay

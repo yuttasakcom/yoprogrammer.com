@@ -1,0 +1,93 @@
+{
+  "name": "yoprogrammer.com",
+  "version": "1.0.0",
+  "description": "yoprogrammer.com",
+  "main": "server/app.js",
+  "scripts": {
+    "dev:build-client": "webpack --config config/webpack.client.js --watch",
+    "dev:build-server": "webpack --config config/webpack.server.js --watch",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev": "npm-run-all --parallel dev:*",
+    "prod:build-client": "webpack --config config/webpack.client.js",
+    "prod:build-server": "webpack --config config/webpack.server.js",
+    "test": "jest --forceExit",
+    "cover": "jest --coverage --forceExit",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
+    "start": "npm run prod:build-client && npm run prod:build-server && node build/bundle.js"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "react",
+          "stage-0",
+          "env",
+          {
+            "plugins": [
+              "transform-class-properties"
+            ]
+          }
+        ],
+        "plugins": [
+          "babel-plugin-rewire"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/server/**/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuttasakcom/yoprogrammer.com.git"
+  },
+  "keywords": ["yoprogrammer.com"],
+  "author": "Yuttasak Pannawat <yuttasakcom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuttasakcom/yoprogrammer.com/issues"
+  },
+  "homepage": "https://github.com/yuttasakcom/yoprogrammer.com#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "copy-webpack-plugin": "^4.2.3",
+    "css-loader": "^0.28.7",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "node-sass": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "serialize-javascript": "^1.4.0",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-plugin-rewire": "^1.1.0",
+    "coveralls": "^3.0.0",
+    "expect": "^21.2.1",
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.5",
+    "npm-run-all": "^4.1.2",
+    "supertest": "^3.0.0"
+  }
+}
