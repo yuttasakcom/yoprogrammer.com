@@ -11,7 +11,6 @@ dotenv.config()
 const app = express()
 
 // Express configuration.
-app.set('host', process.env.HOST || 'localhost')
 app.set('port', process.env.PORT || 3000)
 app.use(express.static('public'))
 
@@ -19,8 +18,8 @@ app.use(express.static('public'))
 routes(app)
 
 // Start Express server.
-app.listen(app.get('port'), app.get('host'), () => {
-  console.log(`Server running at ${app.get('host')}:${app.get('port')}`)
+app.listen(app.get('port'), () => {
+  console.log(`Server running at port:${app.get('port')}`)
   console.log('Press CTRL-C to stop')
 })
 

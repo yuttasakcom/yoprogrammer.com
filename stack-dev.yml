@@ -3,20 +3,21 @@ version: '3.1'
 services:
 
   proxy:
-    build: ./nginx
+    build: ./reverse-proxy
     container_name: proxy
+    image: yuttasakcom/yoprogrammer-proxy:1.0.0
     networks:
       - proxy
     ports:
       - "80:80"
     restart: always
 
-  nodejs:
+  yoprogrammer:
     build: .
-    container_name: nodejs
+    container_name: yoprogrammer
+    image: yuttasakcom/yoprogrammer-web:1.0.0
     environment:
       - NODE_ENV=production
-      - HOST=yoprogrammer.com
     networks:
       - proxy
     restart: always
