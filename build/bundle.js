@@ -103,7 +103,6 @@ _dotenv2.default.config();
 var app = (0, _express2.default)();
 
 // Express configuration.
-app.set('host', process.env.HOST || 'localhost');
 app.set('port', process.env.PORT || 3000);
 app.use(_express2.default.static('public'));
 
@@ -111,8 +110,8 @@ app.use(_express2.default.static('public'));
 (0, _routes2.default)(app);
 
 // Start Express server.
-app.listen(app.get('port'), app.get('host'), function () {
-  console.log('Server running at ' + app.get('host') + ':' + app.get('port'));
+app.listen(app.get('port'), function () {
+  console.log('Server running at port:' + app.get('port'));
   console.log('Press CTRL-C to stop');
 });
 

@@ -12,9 +12,9 @@ services:
       - "80:80"
     restart: always
 
-  yoprogrammer:
+  web:
     build: .
-    container_name: yoprogrammer
+    container_name: web
     image: yuttasakcom/yoprogrammer-web:1.0.0
     environment:
       - NODE_ENV=production
@@ -24,4 +24,5 @@ services:
 
 networks:
   proxy:
-    driver: overlay
+    driver: bridge
+    #driver: overlay
