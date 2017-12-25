@@ -1,0 +1,11 @@
+body {
+  background-color: $ligth-gray;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
