@@ -13,9 +13,7 @@ const config = {
     path: resolve('build'),
     filename: 'bundle.js'
   },
-  externals: webpackNodeExternals({
-    whitelist: /\.css$/
-  }),
+  externals: webpackNodeExternals(),
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(

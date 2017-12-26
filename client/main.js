@@ -2,6 +2,7 @@ import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import 'font-awesome/scss/font-awesome.scss'
 import 'bootstrap/scss/bootstrap.scss'
 import './assets/styles/styles.scss'
 

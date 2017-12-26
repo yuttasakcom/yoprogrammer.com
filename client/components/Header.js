@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav className="navbar navbar-dark bg-inverse navbar-expand-sm">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          Yo Programmer
+          YoProgrammer
         </Link>
       </div>
     </nav>

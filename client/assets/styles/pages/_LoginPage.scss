@@ -1,0 +1,101 @@
+.loginContainer {
+    color: $white;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+    box-sizing: border-box;
+
+    label {
+        color: $light-gray;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 27px;
+        line-height: 27px;
+        color: $white;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    button {
+        border-radius: 250px;
+        height: 50px;
+    }
+
+    a:link {
+        color: $white;
+    }
+    a:visited {
+        color: $white;
+    }
+    a:hover {
+        color: $white;
+    }
+    a:active {
+        color: $white;
+    }
+}
+
+.loginText {
+    color: $white;
+    h1 {
+        color: $light-green;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    h2 {
+        margin: 35px 0;
+    }
+
+    ul {
+        padding: 0px;
+        
+        li {
+            padding: 5px 30px;
+            font-size: 20px;
+            list-style-type: none;
+            background: url("/statics/img/icons/checkmark.png") no-repeat 0 5px;
+        }
+    }
+}
+
+.login-line {
+    position: absolute;
+    height: 100%;
+    margin-left: -100px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    $white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    $white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    $white;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    $white;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    $white;
+}
+
+@media (max-width: 991px) {
+    .login-line {
+        display: none;
+    }
+}

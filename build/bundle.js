@@ -223,15 +223,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(1);
 
-var _Header = __webpack_require__(9);
+var _LoginPage = __webpack_require__(9);
 
-var _Header2 = _interopRequireDefault(_Header);
+var _LoginPage2 = _interopRequireDefault(_LoginPage);
 
-var _HomePage = __webpack_require__(10);
+var _HomePage = __webpack_require__(11);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _UserPage = __webpack_require__(11);
+var _UserPage = __webpack_require__(12);
 
 var _UserPage2 = _interopRequireDefault(_UserPage);
 
@@ -240,9 +240,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Router = function Router() {
   return _react2.default.createElement(
     'div',
-    null,
-    _react2.default.createElement(_Header2.default, null),
+    { id: 'routes' },
     _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomePage2.default, exact: true }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _LoginPage2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { path: '/user', component: _UserPage2.default })
   );
 };
@@ -266,29 +266,146 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(1);
 
+var _Header = __webpack_require__(10);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = function Header() {
+var LoginPage = function LoginPage() {
   return _react2.default.createElement(
-    'header',
-    null,
+    'div',
+    { id: 'login-page', className: 'background' },
+    _react2.default.createElement(_Header2.default, null),
     _react2.default.createElement(
-      'nav',
-      { className: 'navbar navbar-dark bg-dark navbar-expand-sm' },
+      'div',
+      { className: 'container' },
       _react2.default.createElement(
         'div',
-        { className: 'container' },
+        { className: 'row' },
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/', className: 'navbar-brand' },
-          'Yo Programmer'
+          'div',
+          { className: 'col-md-12 col-lg-4 mt-sm-10 mt-md-10 mt-lg-21' },
+          _react2.default.createElement(
+            'div',
+            { className: 'loginContainer' },
+            _react2.default.createElement(
+              'form',
+              null,
+              _react2.default.createElement(
+                'h2',
+                { className: 'mb-4 text-center' },
+                _react2.default.createElement('i', { className: 'fa fa-lock', 'aria-hidden': 'true' }),
+                ' ',
+                '\u0E25\u0E47\u0E2D\u0E01\u0E2D\u0E34\u0E19\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E23\u0E30\u0E1A\u0E1A'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'label',
+                  { htmlFor: 'username' },
+                  'Username'
+                ),
+                _react2.default.createElement('input', {
+                  className: 'transparent border-left-0 border-top-0 border-right-0',
+                  type: 'text',
+                  placeholder: 'e.g. example',
+                  required: true
+                })
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'label',
+                  { htmlFor: 'password' },
+                  'Password'
+                ),
+                _react2.default.createElement('input', {
+                  className: 'transparent border-left-0 border-top-0 border-right-0',
+                  type: 'password',
+                  placeholder: 'your password',
+                  required: true
+                })
+              ),
+              _react2.default.createElement(
+                'button',
+                {
+                  type: 'submit',
+                  className: 'btn btn-lg btn-block btn-outline-light mt-5'
+                },
+                _react2.default.createElement('i', { className: 'fa fa-key', 'aria-hidden': 'true' }),
+                ' Login'
+              ),
+              _react2.default.createElement(
+                'small',
+                { className: 'form-text text-muted text-center mt-3' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'mr-2 text-light' },
+                  'Login with Facebook : '
+                ),
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { to: '' },
+                  _react2.default.createElement('i', {
+                    className: 'fa fa-facebook-official fs-20',
+                    'aria-hidden': 'true'
+                  })
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'col-md-12 col-lg-8 mt-5 mt-md-10 mt-lg-20 pl-lg-20' },
+          _react2.default.createElement(
+            'div',
+            { className: 'd-flex justify-content-between' },
+            _react2.default.createElement('div', { className: 'border login-line' }),
+            _react2.default.createElement(
+              'div',
+              { className: 'loginText' },
+              _react2.default.createElement(
+                'h1',
+                null,
+                'POS'
+              ),
+              _react2.default.createElement(
+                'h2',
+                null,
+                '\u0E23\u0E30\u0E1A\u0E1A\u0E1A\u0E23\u0E34\u0E2B\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32'
+              ),
+              _react2.default.createElement(
+                'ul',
+                null,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  '\u0E2A\u0E30\u0E14\u0E27\u0E01 \u0E23\u0E27\u0E14\u0E40\u0E23\u0E47\u0E27 \u0E2A\u0E27\u0E22\u0E07\u0E32\u0E21 \u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19\u0E07\u0E48\u0E32\u0E22'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  '\u0E21\u0E35 Feature \u0E23\u0E2D\u0E07\u0E23\u0E31\u0E1A\u0E01\u0E32\u0E23\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19\u0E17\u0E35\u0E48\u0E2B\u0E25\u0E32\u0E01\u0E2B\u0E25\u0E32\u0E22 \u0E41\u0E25\u0E30 \u0E1F\u0E23\u0E35!'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  '\u0E1B\u0E25\u0E2D\u0E14\u0E20\u0E31\u0E22 (OWASP Top 10 - 2017) '
+                )
+              )
+            )
+          )
         )
       )
     )
   );
 };
 
-exports.default = Header;
+exports.default = LoginPage;
 
 /***/ }),
 /* 10 */
@@ -305,75 +422,59 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(1);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var HomePage = function HomePage() {
+var Header = function Header() {
   return _react2.default.createElement(
-    "div",
-    { className: "container" },
+    'header',
+    null,
     _react2.default.createElement(
-      "div",
-      { className: "row" },
+      'nav',
+      { className: 'navbar navbar-dark bg-inverse navbar-expand-sm' },
       _react2.default.createElement(
-        "div",
-        { className: "col-12 col-lg-8" },
+        'div',
+        { className: 'container' },
         _react2.default.createElement(
-          "div",
-          { className: "card my-3 my-lg-5" },
-          _react2.default.createElement("img", {
-            className: "card-img-top",
-            src: "/statics/img/full-stack-developer1.png",
-            alt: "Card image cap"
-          }),
-          _react2.default.createElement(
-            "div",
-            { className: "card-body" },
-            _react2.default.createElement(
-              "h4",
-              { className: "card-title" },
-              "\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07\u0E2A\u0E39\u0E48 Full Stack Web Developer"
-            ),
-            _react2.default.createElement(
-              "p",
-              { className: "card-text" },
-              _react2.default.createElement(
-                "small",
-                { className: "text-muted" },
-                "Last updated 3 mins ago"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              { className: "card-text" },
-              "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            ),
-            _react2.default.createElement(
-              "p",
-              _defineProperty({ className: "card-text" }, "className", "text-right"),
-              _react2.default.createElement(
-                "button",
-                { className: "btn btn-primary" },
-                "\u0E2D\u0E48\u0E32\u0E19\u0E15\u0E48\u0E2D"
-              )
-            )
-          )
+          _reactRouterDom.Link,
+          { to: '/', className: 'navbar-brand' },
+          'YoProgrammer'
         )
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "col-12 col-lg-4" },
-        "b"
       )
     )
   );
 };
 
-exports.default = HomePage;
+exports.default = Header;
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HomePage = function HomePage() {
+  return _react2.default.createElement(_reactRouterDom.Redirect, { to: '/login' });
+};
+
+exports.default = HomePage;
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
