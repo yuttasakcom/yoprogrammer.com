@@ -54,7 +54,7 @@ const LoginPage = () => (
           <div className="d-flex justify-content-between">
             <div className="border login-line" />
             <div className="loginText">
-              <h1>POS</h1>
+              <h1 className="text-center text-md-left">POS</h1>
               <h2>ระบบบริหารจัดการร้านค้า</h2>
               <ul>
                 <li>สะดวก รวดเร็ว สวยงาม ใช้งานง่าย</li>

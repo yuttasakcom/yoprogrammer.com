@@ -370,7 +370,7 @@ var LoginPage = function LoginPage() {
               { className: 'loginText' },
               _react2.default.createElement(
                 'h1',
-                null,
+                { className: 'text-center text-md-left' },
                 'POS'
               ),
               _react2.default.createElement(
